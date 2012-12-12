@@ -1,9 +1,9 @@
-var cah_models = {};
+var cah = cah || {};
 var test = test || function() {};
+var cah = cah || {};
+cah.models = {};
+
 (function() {
-
-
-
     /**
        A simple rand function
     */
@@ -31,8 +31,6 @@ var test = test || function() {};
     /**
        An implementation of reduce
     */
-
-
     function reduce(array, initial, callback) {
         var ret = initial
         for(var i = 0; i < array.length; i++) {
@@ -255,9 +253,13 @@ var test = test || function() {};
         }
     );
 
+    ordset.to_array = function(set_data) {
+        return set_data;
+    }
+
     // Exports
-    cah_models.ordset = ordset;
-    cah_models.rand = rand;
-    cah_models.reduce = reduce;
+    cah.models.ordset = ordset;
+    cah.models.rand = rand;
+    cah.models.reduce = reduce;
 
 })();
